@@ -37,6 +37,9 @@ function Login() {
   };
   return (
     <div className="container">
+    <h1>
+      Reminder App
+    </h1>
       <div className="innerBox">
         <h1 className="heading">Login</h1>
 
@@ -57,7 +60,11 @@ function Login() {
 
         <div className="footer">
           <b className="error">{errorMsg}</b>
-          <button disabled={submitButtonDisabled} onClick={handleSubmission}>
+          <button
+            type="submit"
+            disabled={submitButtonDisabled}
+            onClick={handleSubmission}
+          >
             Login
           </button>
           <p>

@@ -4,10 +4,16 @@
   width: 100%;
   background: linear-gradient(to right, #9900ff, #cc80ff);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+.container > h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #fff;
+  margin-bottom: 4rem;
+}
 .innerBox {
   min-width: 480px;
   height: fit-content;
