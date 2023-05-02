@@ -28,10 +28,6 @@ function Signup() {
     createUserWithEmailAndPassword(auth, values.email, values.pass)
       .then(async (res) => {
         setSubmitButtonDisabled(false);
-        const user = res.user;
-        await updateProfile(user, {
-          displayName: values.name,
-        });
         navigate("/");
       })
       .catch((err) => {
@@ -44,7 +40,6 @@ function Signup() {
     <div className="container">
       <div className="innerBox">
         <h1 className="heading">Signup</h1>
-
         <InputControl
           label="Name"
           placeholder="Enter your name"
@@ -66,7 +61,6 @@ function Signup() {
             setValues((prev) => ({ ...prev, pass: event.target.value }))
           }
         />
-
         <div className="footer">
           <b className="error">{errorMsg}</b>
           <button onClick={handleSubmission} disabled={submitButtonDisabled}>

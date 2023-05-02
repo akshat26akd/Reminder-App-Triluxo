@@ -15,8 +15,6 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/Dashboard" element={<Dashboard />} />
         </Routes>
-        {/* <Login />
-        <Dashboard /> */}
       </Router>
     </div>
   );
